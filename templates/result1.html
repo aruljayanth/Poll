@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<style>
+  body{
+  background-color: black;
+}
+
+font.uk {
+  color:white;
+
+
+}
+font.uk:hover {
+  color:white;
+
+
+}
+
+</style>
+<title>{{ data.question }}</title>
+</head>
+<body>
+<font class="uk">
+<h1>
+{{ data.question }}
+</h1>
+<ul style="list-style: none;">
+{% for e in votes %}
+  <li>{{ e }} {{ votes[e] }}</li>
+  <br>
+{% endfor %}
+</ul>
+<form action = "http://127.0.0.1:5000/poll1">
+  <button type="submit">Vote Again?</button>
+    </form>
+</font>
+</body>
+</html>
+ 
